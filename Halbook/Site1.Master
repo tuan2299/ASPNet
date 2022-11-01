@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Halbook.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Halbook Store</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,100" rel="stylesheet" type="text/css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/stylec"/>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header-area" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <ul>
+                            <li><asp:LinkButton ID="Lbtnhal" runat="server" href="Default.aspx" class="fa fa-user"> Halbook</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="Lbtnmyacc" runat="server" href="Profile.aspx" class="fa fa-user"> Thông tin cá nhân</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="Lbtnlogin" runat="server" href="Signin.aspx" class="fa fa-user"> Đăng nhập</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="Lbtnchangepas" runat="server" href="Changepass.aspx" class="fa fa-user"> Đổi mật khẩu</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="Lbtnlogout" runat="server" href="Default.aspx" class="fa fa-user"> Đăng xuất</asp:LinkButton></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="header-right">
+                        <ul class="list-unstyled list-inline">
+                            <li>
+                                <a><asp:Label ID="Label1" runat="server" Text="Ngôn ngữ: Tiếng Việt"></asp:Label></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <br /><div class="logo">
+                        <asp:Image ID="imglogo" runat="server" ImageUrl="~/img/logohal.png" Width="30%"/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="Cart.aspx"><asp:Label ID="Label2" runat="server" Text="Giỏ hàng" ></asp:Label> 
+                            <asp:LinkButton ID="Lbtnxu" runat="server">- 99.000 Vnđ</asp:LinkButton>
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br />
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><asp:LinkButton ID="lbtnhome" runat="server" href="Default.aspx" > Trang chủ</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbtnshoppage" runat="server" href="Shop.aspx" > Sách</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbtncart" runat="server" href="Cart.aspx" > Giỏ hàng</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbtncheck" runat="server" href="Checkout.aspx" > Thanh toán</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbtncontact" runat="server" href="Contacts.aspx" > Liên hệ</asp:LinkButton></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <div class="footer-top-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-about-us">
+                        <h2>Halbook<span>Store</span></h2>
+                        <p>Halbook - Sách của mọi người ở mọi nơi sứ mệnh của chúng tôi là mang đến cho khách hàng những cuốn sách với nội dung hay và giá cả hợp lí- với qui mô vừa nhỏ nhưng chúng tôi luôn mong sự ủng hô của quí khách cùng với sự nổ lực với phương châm" Sách là bạn khách hàng là thượng đế"  nhà sách sẽ ngày càng phát triển mạnh mẽ và ngày càng phát triền vưng mạnh và đáp ứng nhu cầu đọc sách truyền thống cũng như việc đọc sách điện tử ngày càng đồi mới và hiện đại hơn!</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Điều hướng người dùng </h2>
+                        <ul>
+                            <li><asp:Label ID="Label3" runat="server" Text="Address: "></asp:Label><br />98 Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội</li>
+                            <li><asp:Label ID="Label4" runat="server" Text="Phone: "><asp:LinkButton ID="Lbtnphone" runat="server">099 8899 898</asp:LinkButton></asp:Label></li>
+                            <li><asp:Label ID="Label5" runat="server" Text="Email: "><asp:LinkButton ID="Lbtnemail" runat="server">HalbookStore@gmail.com</asp:LinkButton></asp:Label></li>
+                            <li><asp:Label ID="Label6" runat="server" Text="Website: "><asp:LinkButton ID="Lbtnweb" runat="server">HalboocStore.com.vn</asp:LinkButton></asp:Label></li>
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Danh mục</h2>
+                        <ul>
+                            <li><asp:LinkButton ID="lbtnbktt" runat="server" href="#" > Bách khoa toàn thư</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="lbtntn" runat="server" href="#" > Truyện ngắn</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="lbtntt" runat="server" href="#" > Tiểu thuyết</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="lbtnkns" runat="server" href="#" > Kỹ năng sống</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="lbtnta" runat="server" href="#" > Tiếng Anh</asp:LinkButton></li>
+                        </ul>                        
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Bản tin</h2>
+                        <p>Đăng ký nhận bản tin của chúng tôi và nhận các ưu đãi độc quyền mà bạn sẽ không tìm thấy ở bất kỳ nơi nào khác ngay trong hộp thư đến của bạn!</p>
+                        <div class="newsletter-form">
+                            <div>
+                                <asp:TextBox ID="txtnemail" runat="server" type="email" placeholder="Nhập email của bạn"></asp:TextBox>
+                                <asp:Button ID="btnsubmit" runat="server" type="submit" Text="Đăng ký" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="copyright">
+                        <p>&copy; @2022 HalBookstore. All Rights Reserved. <a href="index.html" target="_blank">HalBookstore.com</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-card-icon">
+                        <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </form>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/bxslider.min.js"></script>
+	<script type="text/javascript" src="js/script.slider.js"></script>
+</body>
+</html>
